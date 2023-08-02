@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+}
+
+div {
+    text-align:left;
+    padding: 2%;
+    background-color: rgb(42, 42, 107);
+}
+
+a {
+    color: violet;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: large;
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.form {
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+
+}
+
+form {
+    background-color: rgb(42, 42, 107);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5%;
+    text-align: center;
+    border: 2px solid white;
+}
+p {
+    text-align: left;
+}
+
+
+button {
+    background-color: green;
+    margin-top: 2%;
+}
+

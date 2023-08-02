@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js"></script>
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+
+<body>
+        <div class="form">
+            <form onsubmit="signUp(event)">
+                <h3>Sign-Up Form</h3>
+                <input type="text" id="name" name="name" placeholder="=Enter your name">
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <input type="number" id="phonenumber" name="phonenumber" placeholder="Enter your phonenumber">
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <br>
+                <button type="submit">signUp</button>
+                <p>
+                    Already a User? <a href="http://localhost:3000/login/login.html">Login</a>
+                </p>
+            </form>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="sign-up.js"></script>
+</body>
+
+</html>
