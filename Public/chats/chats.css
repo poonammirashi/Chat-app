@@ -1,0 +1,14 @@
+
+div {
+    bottom: 0;
+    background-color: rgb(79, 79, 248);
+    align-self: center;
+    padding:3px 3px 3px 20%;
+}
+input {
+    border: 1px solid lightblue ;
+    width: 10cm;
+}
+label {
+    background-color: rgb(207, 202, 202);
+}
