@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post("/add-message", userAuthenticate.authenticate , chatController.addmessage);
 
-// router.get("/get-message" , userAuthenticate.authenticate, chatController.getmessage);
+router.get("/get-message" , userAuthenticate.authenticate, chatController.getmessages);
 
 module.exports = router ;

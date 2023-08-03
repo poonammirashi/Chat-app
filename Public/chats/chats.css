@@ -20,4 +20,8 @@ input {
 }
 label {
     background-color: rgb(207, 202, 202);
+    display: block;
+    text-align: end;
+    margin: 2%;
+
 }

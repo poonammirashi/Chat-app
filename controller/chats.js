@@ -12,3 +12,14 @@ exports.addmessage = async (req,res,next) => {
         res.status(400).json(err);
     }
 }
+
+exports.getmessages = async (req,res,next) => {
+    try {
+        const messages = await Chats.findAll();
+        res.status(200).json({success:"true", messages});
+    }
+    catch (err) {
+        console.log(err);
+        res.status(400).json({success: "false",err})
+    }
+}
