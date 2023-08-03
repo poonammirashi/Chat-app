@@ -23,10 +23,11 @@ async function signUp(e) {
         }
     }
     catch (err) {
-        if (err.status === 500) {
-            window.alert("user is alredy there");
+        console.log(err.response.status);
+        if (err.response.status === 500) {
+            window.alert("user is alredy exist, Please login");
         } else {
-            window.alert(err)
+            window.alert(err);
         }
     }
 }

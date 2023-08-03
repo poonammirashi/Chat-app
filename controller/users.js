@@ -12,7 +12,7 @@ exports.addUser = async (req, res, next) => {
         }
         const exUser = await User.findOne({ where: { email: email } });
         if (exUser) {
-            return res.status(504).json({ message: "user already is there" });
+            return res.status(500).json({ message: "user already exist" });
         }
         await bcrypt.hash(password, 10, async (err, hash) => {
             const user = await User.create({ name, email, phonenumber, password: hash })
@@ -35,16 +35,18 @@ exports.getUser = async (req, res, next) => {
         if (user) {
             await bcrypt.compare(password, user.password, (err, result) => {
                 if (err) {
-                    return res.status(502).json({ message: "err" })
+                    throw new Error(err);
                 }
                 if (result === true) {
-                    return res.status(200).json({ message: "user logged in successfully" });
+                    const token = userservice.generatewebtoken(user.name,user.id)
+                    console.log(token);
+                    return res.status(200).json({ message: "user logged in successfully" , token });
                 } else {
-                    return res.status(503).json({ message: "user is unathorised" });
+                    return res.status(401).json({ message: "user is unathorised"});
                 }
             })
         } else {
-            return res.status(504).json({ message: "user not found" });
+            return res.status(404).json({ message: "user not found" });
         }
     }
     catch (err) {
