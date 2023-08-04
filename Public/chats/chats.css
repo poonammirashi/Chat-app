@@ -4,7 +4,7 @@ div#container {
     margin: auto;
     display: block;
     width: 900px;
-    height: 15cm;
+    max-height: 100%;
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ input {
 label {
     background-color: rgb(207, 202, 202);
     display: block;
-    text-align: end;
+    text-align: left;
     margin: 2%;
 
 }

@@ -14,8 +14,10 @@
         <h1>iChat</h1>
     </div>
     <div class="input">
-        <input type="text" id="chatmessage" name="chatmessage">
-        <button onclick="addmessage()">Send</button>
+        <form onsubmit="addmessage(event)">
+            <input type="text" id="chatmessage" name="chatmessage">
+            <button>Send</button>
+        </form>
     </div>
     <script src="chats.js"></script>
 </body>
