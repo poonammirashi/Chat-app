@@ -8,7 +8,7 @@ exports.authenticate = async (req,res,next) => {
         if(!userObj) {
             throw new Error("null")
         }
-        // console.log(token, "userid >>>>", userObj.id);
+        
         const user = await User.findByPk(userObj.id);
         req.user = user;
         // console.log(user);

@@ -8,6 +8,6 @@ exports.isvalid = (string) => {
     }
 }
 
-exports.generatewebtoken = (username,id) => {
-    return jwt.sign({username,id}, process.env.JWT_SECRET_KEY);
+exports.generatewebtoken = (username, id) => {
+    return jwt.sign({ username, id }, process.env.JWT_SECRET_KEY);
 }

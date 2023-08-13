@@ -31,7 +31,7 @@ exports.getUser = async (req, res, next) => {
         if (userservice.isvalid(email) || userservice.isvalid(password)) {
             return res.status(501).json({ message: "invalid inputs" });
         }
-        const user = await User.findOne({ where: { email: email } });
+        const user = await User.findOne({where: { email: email } });
         if (user) {
             await bcrypt.compare(password, user.password, (err, result) => {
                 if (err) {
@@ -54,3 +54,4 @@ exports.getUser = async (req, res, next) => {
         res.status(500).json({ message: err, suceess: "false" })
     }
 }
+
